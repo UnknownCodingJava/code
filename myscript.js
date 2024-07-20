@@ -1,16 +1,20 @@
-function datetime (){
-    // create a function to update the date and time
-    function updateDateTime() {
-        // create a new `Date` object
-        const now = new Date();
+function page_tab(evt, tab_name) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
   
-        // get the current date and time as a string
-        const currentDateTime = now.toLocaleString();
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
   
-        // update the `textContent` property of the `span` element with the `id` of `datetime`
-        document.querySelector('#datetime').textContent = currentDateTime;
-      }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
   
-      // call the `updateDateTime` function every second
-      setInterval(updateDateTime, 1000);
-}
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(tab_name).style.display = "block";
+    evt.currentTarget.className += " active";
+  }

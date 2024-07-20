@@ -5,42 +5,34 @@
   <script src="myscript.js"></script>
 </head>
 <body>
+    <div id="wrap">
+        <div class="tab">
+            <div id="logo"><img id="logo" src="logo.jpg" alt="profile_pic"></div>
+            <button class="tablinks" onclick="page_tab(event, 'home_page')">Home</button>
+            <button class="tablinks" onclick="page_tab(event, 'resume')">Resume</button>
+            <button class="tablinks" onclick="page_tab(event, 'hobbies')">Hobbies</button>
+        </div>
 
+        <div id="header"> Website.com</div>
+        
+        <div id="home_page" class="tabcontent" style="display: block;">
+            <h3>Home Page</h3>
+            <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
+        </div>
+        
+        <div id="resume" class="tabcontent" style="display: none;">
+            <h3>Code</h3>
+            <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
+        </div>
+        
+        <div id="hobbies" class="tabcontent" style="display: none;">
+            <h3>Hobbies</h3>
+            <p>stuff to add like lego pictures, comics, funko pops</p>
+        </div>
 
-<!-- Side navigation -->
-<div class="sidenav">
-    <img src="logo.jpg" alt="logo">
-    <a href="#">Home</a>
-    <a href="#">Resume</a>
-    <a href="#">Hobbies</a>
-    <a href="#">Code</a>
-    <a href="#">Contact</a>
-  </div>
-
-<div id="title"><h1>Page Under Construction</h1></div>
-
-<div id="datetime">
-    <script>
-    // create a function to update the date and time
-    function updateDateTime() {
-        // create a new `Date` object
-        const now = new Date();
-  
-        // get the current date and time as a string
-        const currentDateTime = now.toLocaleString();
-  
-        // update the `textContent` property of the `span` element with the `id` of `datetime`
-        document.querySelector('#datetime').textContent = currentDateTime;
-      }
-  
-      // call the `updateDateTime` function every second
-      setInterval(updateDateTime, 1000);
-    </script>
-</div>
-
-<div id="content"><div>HOME PAGE</div>
-<div id="home_image"> <img src="" alt="logo">sample of code?</div>
-
-</div>
+        <div id="footer"> <div style="float: left;">this is where all my links will go to...</div>
+        <div id="icons"><img src="logo3.png" alt="profile_pic"></div>
+        </div>
+      </div>
 </body>
 </html>
