@@ -3,16 +3,17 @@ body {
     position:fixed;
   }
   div{
-    border: 2px solid #ddd;
+    border: 2px solid red;
   }
-  h1 {
-    color: blue;
+  #title {
+    color: green;
     position:fixed;
-    padding-left: 200px;
-  }
-  p {
-    color: red;
-    position: fixed;
+    padding-right: 20%;
+    background-color: #262626;
+    height: 15%;
+    top: 0;
+    left:13%;
+    right: .5%;;
   }
   img {
     border: 1px solid #ddd;
@@ -23,9 +24,22 @@ body {
   #datetime{
     position: fixed;
     z-index: 1;
-    right: 0;
-    top: 0;
-    font: optional;
+    right: 1%;
+    top: 30px;
+    font-size: 23px;
+    color: green;
+  }
+  #content{
+    position: fixed;
+    left: 13%;
+    top: 18%;
+    right: .5%;
+    bottom: 5%;
+  }
+  #home_image{
+    width: 30%;
+    height: 90%;
+    top: 5%;
   }
 
   /* The sidebar menu */
