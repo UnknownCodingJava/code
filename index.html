@@ -9,19 +9,27 @@
         <div class="tab">
             <div id="logo"><img id="logo" src="logo.jpg" alt="profile_pic"></div>
             <button class="tablinks" onclick="page_tab(event, 'home_page')">Home</button>
-            <button class="tablinks" onclick="page_tab(event, 'resume')">Resume</button>
+            <button class="tablinks" onclick="page_tab(event, 'code')">Code</button>
             <button class="tablinks" onclick="page_tab(event, 'hobbies')">Hobbies</button>
+            <button class="tablinks" onclick="page_tab(event, 'about')">About</button>
+            <button class="tablinks" onclick="page_tab(event, 'contact_me')">Contact Me</button>
         </div>
 
         <div id="header"> Website.com</div>
         
         <div id="home_page" class="tabcontent" style="display: block;">
-            <h3>Home Page</h3>
-            <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
+            <h1>Welcome to my page</h1>
+            <div class="blog">
+                <h3>this is the blog</h3>
+                <div id="blog_image">
+                    <img src="blog1.webp" alt="profile_pic" href="mailto:EMAILADDRESS">
+                </div>
+                <div>this will be the content on the blog <br> will need to make it scrollable</div>
+            </div>
         </div>
         
-        <div id="resume" class="tabcontent" style="display: none;">
-            <h3>Code</h3>
+        <div id="code" class="tabcontent" style="display: none;">
+            <h1>Code</h1>
             <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
         </div>
         
@@ -29,9 +37,41 @@
             <h3>Hobbies</h3>
             <p>stuff to add like lego pictures, comics, funko pops</p>
         </div>
+        <div id="about" class="tabcontent" style="display: none;">
+            <h1>Josh H.M.</h1>
+            <p><b>Objective: </b></p>
+            <p>
+                To leverage my programming skills in a dynamic organization that fosters learning and professional growth.
+            </p>
+            <hr>
+            <p><b>**Education:**</b></p>
+            <hr>
+            <p><b>**Technical Skills:** </b></p>
+            <hr>
+            <p><b>**Professional Experience:**</b></p>
+            <hr>
+            <p><b>**Projects:** </b></p>
+            <hr>
+            <p><b> Skills: </b>
+                <br>- Excellent problem-solving abilities.
+                <br>- Strong communication and teamwork skills.
+                <br>- Ability to learn new technologies quickly.
+            </p>
+            <hr>
+            <p><b>References:</b> Available upon request.</p>
+        </div>
+
+        <div id="contact_me" class="tablinks" style="display: none;">
+            Contact me message
+        </div> 
 
         <div id="footer"> <div style="float: left;">this is where all my links will go to...</div>
-        <div id="icons"><img src="logo3.png" alt="profile_pic"></div>
+        <div id="icons"><img src="logo3.png" alt="profile_pic" href="mailto:EMAILADDRESS"></div>
+        <div id="icons">
+            <a href="https://github.com/UnknownCodingJava" target="_blank">
+                <img src="git.png" alt="profile_pic" href="mailto:EMAILADDRESS">
+            </a>
+            </div>
         </div>
       </div>
 </body>
