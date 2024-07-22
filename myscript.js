@@ -1,3 +1,4 @@
+
 function page_tab(evt, tab_name) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -17,4 +18,15 @@ function page_tab(evt, tab_name) {
     // Show the current tab, and add an "active" class to the link that opened the tab
     document.getElementById(tab_name).style.display = "block";
     evt.currentTarget.className += " active";
+  }
+  function verify(evt,  sent_veirfy){
+    document.getElementById(sent_veirfy).style.display="block";
+  }
+  function clear_val(event, company_name, date, email, phone, text_message){
+    document.getElementById('msg_sent').style.display="none";
+    document.getElementById('company_name').value='';
+    document.getElementById('date').value='';
+    document.getElementById('email').value='';
+    document.getElementById('phone').value='';
+    document.getElementById('text_message').value='';
   }

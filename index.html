@@ -2,9 +2,12 @@
 <html>
 <head>
   <link rel="stylesheet" href="myStyle.css">
-  <script src="myscript.js"></script>
+  
+  <script src="slideshow.js" async></script>
+  <script src="myscript.js" async></script>
 </head>
 <body>
+    
     <div id="wrap">
         <div class="tab">
             <div id="logo"><img id="logo" src="logo.jpg" alt="profile_pic"></div>
@@ -14,20 +17,25 @@
             <button class="tablinks" onclick="page_tab(event, 'about')">About</button>
             <button class="tablinks" onclick="page_tab(event, 'contact_me')">Contact Me</button>
         </div>
-
         <div id="header"> Website.com</div>
         
+
+
         <div id="home_page" class="tabcontent" style="display: block;">
-            <h1>Welcome to my page</h1>
-            <div class="blog">
-                <h3>this is the blog</h3>
-                <div id="blog_image">
-                    <img src="blog1.webp" alt="profile_pic" href="mailto:EMAILADDRESS">
+
+ 
+            <div class="image-slideshow">
+                <div class="image fade">
+                    <img src="img1.jpg" alt="Mountain Top">
                 </div>
-                <div>this will be the content on the blog <br> will need to make it scrollable</div>
+                <div class="image fade">
+                    <img src="img2.jpg" alt="Palm Trees">
+                </div>
+                <div class="image fade">
+                    <img src="img3.jpg" alt="Neon Sign">
+                </div>
             </div>
         </div>
-        
         <div id="code" class="tabcontent" style="display: none;">
             <h1>Code</h1>
             <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
@@ -61,8 +69,42 @@
             <p><b>References:</b> Available upon request.</p>
         </div>
 
-        <div id="contact_me" class="tablinks" style="display: none;">
-            Contact me message
+        <div id="contact_me" class="tabcontent" style="display: none;">
+            <label id="text_style">Contact me message: </label><br><br><br>
+        <div style="width: 49%; float: left;">
+            <label id="text_style">Company name: </label>
+            <input id="company_name" class="input_area">
+        </div>
+        <div style="width: 49%; float: left;">
+            <label id="text_style">Date: </label>
+            <input id="date" class="input_area">
+        </div>
+            <br>
+        <div style="width: 49%; float: left;">
+            <label id="text_style">Email: </label>
+            <input id="email" class="input_area">
+        </div>
+        <div style="width: 49%; float: left;">
+            <label id="text_style">Phone Number: </label>
+            <input class="input_area" id="phone">
+            <br>
+        </div>
+        <div style="width: 100%; float: left;">
+            <label id="text_style">message: optional, best time of contact</label>
+            <br>
+            <textarea id="text_message"></textarea>
+        </div>
+        <div style="width: 25%; float: right; margin-top: 2%;">
+            <button id="submit_button"  onclick="verify(event, 'msg_sent')">Submit message</button>
+        </div>
+        <div id="msg_sent" style="float: right; margin-top: 4%; font-size: 20px; width: 15%; display: none;">
+            Message sent &#10003;
+        </div>
+        <div style="width: 25%; float: right; margin-top: 2%;">
+            <button id="clear"  onclick="clear_val(event, 'company_name', 'date', 'email', 'phone', 'text_message')">clear message</button>
+        </div>
+
+        
         </div> 
 
         <div id="footer"> <div style="float: left;">this is where all my links will go to...</div>
@@ -73,6 +115,10 @@
             </a>
             </div>
         </div>
+        
       </div>
+      
+    
 </body>
+
 </html>

@@ -13,9 +13,10 @@ body{
   background-color: #4795ed;
   border-radius: 5%;
   width: 20%;
-  min-height: 500px;
+  min-height: 480px;
+  max-height: 490px;
   bottom: 0;
-  margin-top: 1%;
+  margin-top: .5%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -49,7 +50,7 @@ body{
   padding: 10px 12px 10px 10px;
   border: 2px solid #ccc;
   width: 75%;
-  height: 440px;
+  height: 450px;
   margin-top: 1%;
   margin-left: 2%;
   color: black;
@@ -63,7 +64,7 @@ body{
     padding-top: 1%;
     padding-right: 1%;
     border-radius: 80%;
-    width: 98%;
+    width: 90%;
 }
 #header{
     float: left;
@@ -82,14 +83,14 @@ body{
     bottom: 0;
     right: 0;
     width: 78%;
-    height: 7%;
-    margin-right: 2%;
+    height: 5%;
+    margin-right: 0;
     background-color: #4795ed;
     color: white;
     text-align: center;
-    margin-bottom: .5%;
+    margin-bottom: 0;
     padding-bottom: .5%;
-    border-radius: 10%;
+    border-radius: 0%;
 }
 #icons{
   border: none;
@@ -124,4 +125,75 @@ body{
     
     width: 100%;
     height: 100%;
+}
+#text_style{
+  font-size: 25px;
+  float: left;
+}
+.input_area{
+  float: left;
+  border: 2px solid #ccc;
+  color: black;
+  box-shadow: 5px 5px 5px lightblue;
+  background-color: rgba(124, 138, 151, 0.4);
+  margin-bottom: 3%;
+  margin-right: 15%;
+  margin-left: 5%;
+  height: 30px;
+}
+textarea{
+  float: left;
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+#submit_button{
+  float: right;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px lightblue;
+  background-color: rgb(16, 104, 0);
+  height: 70px;
+  bottom: 0;
+  margin-right: 10%;
+  font-size: 25px;
+}
+#clear{
+  float: right;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px lightblue;
+  background-color: rgba(100, 2, 2, 0.573);
+  height: 70px;
+  bottom: 0;
+  margin-right: 10%;
+  font-size: 25px;
+}
+.image-slideshow {
+  height: 95%;
+  margin: auto;
+  max-height: 95%;
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+img {
+  max-height: 95%;
+  
+}
+
+.fade {
+  height: 98%;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
