@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/joshh/Desktop/code/index.html#",
+            "url": "file:///C:/Users/joshh/OneDrive/Desktop/code/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
