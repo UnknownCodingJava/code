@@ -18,7 +18,7 @@
             <button class="tablinks" onclick="page_tab(event, 'contact_me')">Contact Me</button>
         </div>
         <div id="header"> Website.com</div>
-        <div id="home_page" class="tabcontent" style="display: none;">
+        <div id="home_page" class="tabcontent" style="display: block;">
             <div class="image-slideshow">
                 <div class="image fade">
                     <img src="img1.jpg" alt="Mountain Top">
@@ -30,20 +30,99 @@
                     <img src="img3.jpg" alt="Neon Sign">
                 </div>
             </div>
+            <p>
+                <h1> Welcome to My Portfolio: Programming, Creativity, and Hobbies</h1><hr>
+<h3>Hello and welcome to my digital showcase! I'm JH, a passionate programmer and enthusiast 
+of all things tech, creativity, and collectibles. This portfolio is not just a resume but a journey 
+through my skills in programming and love for hobbies like LEGO building, comics, and Funko Pop collecting.
+With a solid foundation in programming languages such as Java, HTML, CSS, I've honed my skills through 
+projects that demonstrate my problem-solving abilities and creativity. From ...[mention a notable project or 
+achievement]... to ...[highlight another project]..., I strive to innovate and deliver solutions that make an impact.</h3>
+            </p>
         </div>
 
 
-        <div id="code" class="tabcontent" style="display: block;">
+        <div id="code" class="tabcontent" style="display: none;">
             <h1>Code</h1>
-            <p>this is where I will add some parts of code, notes, or anything I think is interesting from the page</p>
-            <div id="code_name">
-                <div id="code_name">Name of the program</div>
-                <div id="code_img"> 
-                    <img src="logo3.png" alt="profile_pic" href="mailto:EMAILADDRESS">
+            This is where I will add some parts of code, notes, or anything I think is interesting from the page
+            
+            <!-- Container for code entries -->
+            <div class="code-container">
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
                 </div>
-                <div id="code_text"></div>
+                <div class="code-text">This is where the explanation of the code will go s23423dasdasdasd</div>
+                <button class="tablinks" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
+              
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
+                </div>
+                <div class="code-text">In the heart of a tranquil village nestled among rolling hills, where the sun painted golden hues upon thatched roofs and laughter echoed through cobblestone streets, there lived a young locksmith named Elara. Known for her skillful hands and gentle demeanor, she crafted keys that whispered promises of security and hope to those who sought her artistry.</div>
+                <button class="tablinks" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
+                </div>
+                <div class="code-text">In the heart of a tranquil village nestled among rolling hills, where the sun painted golden hues upon thatched roofs and laughter echoed through cobblestone streets, there lived a young locksmith named Elara. Known for her skillful hands and gentle demeanor, she crafted keys that whispered promises of security and hope to those who sought her artistry.</div>
+                <button class="tablinks" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
+                </div>
+                <div class="code-text">This is where the explanation of the code will go sdf23423423423423fsdfsdfsdfsdf</div>
+                <button class="tablinks" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
+                </div>
+                <div class="code-text">This is where the explanation of the code will go sdfsdfsdsdf</div>
+                <button class="tablinks" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
+              <div class="code-entry">
+                <div><h2>Name of the program</h2></div>
+                <div>
+                  <img class="code-img" src="pong.png" alt="profile_pic">
+                </div>
+                <div class="code-text">This is where the explanation of the code will go sdfsdffsdfsd</div>
+                <button class="" id="gen_button" onclick="page_tab(event, 'code_expanded')">View</button> 
+              </div>
             </div>
-        </div>
+          </div>
+
+
+          <div id="code_expanded" class="tabcontent" style="display: none;">
+            <div style="float: left; margin-top: 2%; left: 1%; width: 10%; height: 10%;">
+                <img src="bck_arrw.png" alt="bck_arrw" onclick="page_tab(event, 'code')">
+            </div>
+            <h1 style="text-align: center;">Code Name</h1>
+            <div class="image-slideshow">
+                <img src="img1.jpg" alt="Mountain Top">
+            </div>
+            <div>
+                <p>
+                    <h1> Welcome to My Portfolio: Programming, Creativity, and Hobbies</h1><hr>
+    <h3>Hello and welcome to my digital showcase! I'm JH, a passionate programmer and enthusiast 
+    of all things tech, creativity, and collectibles. This portfolio is not just a resume but a journey 
+    through my skills in programming and love for hobbies like LEGO building, comics, and Funko Pop collecting.
+    With a solid foundation in programming languages such as Java, HTML, CSS, I've honed my skills through 
+    projects that demonstrate my problem-solving abilities and creativity. From ...[mention a notable project or 
+    achievement]... to ...[highlight another project]..., I strive to innovate and deliver solutions that make an impact.</h3>
+                </p>
+            </div>
+            <button id="gen_button">Download Code</button>
+          </div>
+        
     
 
         <div id="hobbies" class="tabcontent" style="display: none;">
@@ -112,7 +191,7 @@
         
         </div> 
 
-        <div id="footer"> <div style="float: left;">this is where all my links will go to...</div>
+        <div id="footer"> <div style="float: left; margin-left: 35%;">Thanks again for visiting Website.com</div>
         <div id="icons"><img src="logo3.png" alt="profile_pic" href="mailto:EMAILADDRESS"></div>
         <div id="icons">
             <a href="https://github.com/UnknownCodingJava" target="_blank">

@@ -19,10 +19,12 @@ function page_tab(evt, tab_name) {
     document.getElementById(tab_name).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
   function verify(evt,  sent_veirfy){
     document.getElementById(sent_veirfy).style.display="block";
   }
-  function clear_val(event, company_name, date, email, phone, text_message){
+  function
+   clear_val(event, company_name, date, email, phone, text_message){
     document.getElementById('msg_sent').style.display="none";
     document.getElementById('company_name').value='';
     document.getElementById('date').value='';
@@ -30,3 +32,6 @@ function page_tab(evt, tab_name) {
     document.getElementById('phone').value='';
     document.getElementById('text_message').value='';
   }
+
+
+  
