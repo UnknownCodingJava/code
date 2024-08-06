@@ -184,23 +184,18 @@
 
     <div id="contact_me" class="tabcontent" style="display: block;">
       <label id="text_style">Contact me message: </label><br><br><br>
-      <form action="http://localhost/website/database.php?action=insert" method="post">
+      <form id="contactForm" action="http://localhost:8080/projects/code/database.php?action=insert" method="POST">
         <!-- Form fields: name, email, phone, message -->
         <input type="text" name="name" placeholder="Name">
         <input type="email" name="email" placeholder="Email">
         <input type="tel" name="phone" placeholder="Phone">
         <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Submit</button>
-    </form>
-      <div style="width: 25%; float: right; margin-top: 2%;">
-        <button id="submit_button" onclick="verify(event, 'msg_sent')">Submit message</button>
-      </div>
+        <div style="width: 25%; float: right; margin-top: 2%;">
+          <button id="submit_button" onclick="verify(event, 'msg_sent')" type="submit">Submit message</button>
+        </div>
+    </form>    
       <div id="msg_sent" style="float: right; margin-top: 4%; font-size: 20px; width: 15%; display: none;">
         Message sent &#10003;
-      </div>
-      <div style="width: 25%; float: right; margin-top: 2%;">
-        <button id="clear" onclick="clear_val(event, 'company_name', 'date', 'email', 'phone', 'text_message')">clear
-          message</button>
       </div>
     </div>
 

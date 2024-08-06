@@ -358,3 +358,10 @@ img {
   border-radius: 45%;
   border: 0px;
 }
+.show {
+  display: block;
+}
+#msg_sent{
+  float: right; margin-top: 4%; font-size: 20px; width: 15%;
+  display: none;
+}

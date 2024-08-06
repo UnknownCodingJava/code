@@ -20,11 +20,46 @@ function page_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-function verify(evt, sent_veirfy) {
-  document.getElementById(sent_veirfy).style.display = "block";
+function verify(evt, elementId) {
+  if (elementId) {
+      document.getElementById(elementId).style.display = 'block';
+  }
 }
-function
-  clear_val(event, company_name, date, email, phone, text_message) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const formData = new FormData(this);
+
+      fetch('database.php?action=insert', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(result => {
+          if (result.status === 'success') {
+              // Display the success message
+              verify(null, 'msg_sent'); // Ensure 'msg_sent' is the correct ID
+
+              // Optional: Hide contact form or update UI
+              document.getElementById('contactForm').style.display = 'none';
+
+              // Redirect to another page after a delay
+              setTimeout(() => {
+                  window.location.href = '/projects/code/index.html';
+              }, 1000); // Adjust the delay if needed
+          } else {
+              alert("There was an error: " + result.message);
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  });
+});
+
+
+function clear_val(event, company_name, date, email, phone, text_message) {
   document.getElementById('msg_sent').style.display = "none";
   document.getElementById('company_name').value = '';
   document.getElementById('date').value = '';
