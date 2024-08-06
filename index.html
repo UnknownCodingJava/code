@@ -25,7 +25,7 @@
     </div>
 
     <div id="header">
-      Website.com
+      <i><b>CodingCorner.com</b></i>
     </div>
 
     <div id="home_page" class="tabcontent" style="display: none;">
@@ -55,9 +55,9 @@
 
 
     <div id="code" class="tabcontent" style="display: none;">
-      <h1>Code</h1>
-      This is where I will add some parts of code, notes, or anything I think is interesting from the page
+      
       <div class="code-container">
+        <h1 style="width: 98%;">Different projects created by me<hr></h1>
         <div class="code-entry">
           <div>
             <h2>Name of the program</h2>
@@ -182,31 +182,16 @@
       <p><b>References:</b> Available upon request.</p>
     </div>
 
-    <div id="contact_me" class="tabcontent" style="display: none;">
+    <div id="contact_me" class="tabcontent" style="display: block;">
       <label id="text_style">Contact me message: </label><br><br><br>
-      <div style="width: 49%; float: left;">
-        <label id="text_style">Company name: </label>
-        <input id="company_name" class="input_area">
-      </div>
-      <div style="width: 49%; float: left;">
-        <label id="text_style">Date: </label>
-        <input id="date" class="input_area">
-      </div>
-      <br>
-      <div style="width: 49%; float: left;">
-        <label id="text_style">Email: </label>
-        <input id="email" class="input_area">
-      </div>
-      <div style="width: 49%; float: left;">
-        <label id="text_style">Phone Number: </label>
-        <input class="input_area" id="phone">
-        <br>
-      </div>
-      <div style="width: 100%; float: left;">
-        <label id="text_style">message: optional, best time of contact</label>
-        <br>
-        <textarea id="text_message"></textarea>
-      </div>
+      <form action="http://localhost/website/database.php?action=insert" method="post">
+        <!-- Form fields: name, email, phone, message -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <input type="tel" name="phone" placeholder="Phone">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
       <div style="width: 25%; float: right; margin-top: 2%;">
         <button id="submit_button" onclick="verify(event, 'msg_sent')">Submit message</button>
       </div>
@@ -219,7 +204,7 @@
       </div>
     </div>
 
-    <div id="sign-in" class="tabcontent" style="display: block;">
+    <div id="sign-in" class="tabcontent" style="display: none;">
       <div id="sign-in_container">
         <div>
           <p><h1>Sign-In</h1></p>
