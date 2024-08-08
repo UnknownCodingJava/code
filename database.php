@@ -1,19 +1,16 @@
 <?php
-header('Content-Type: application/json');
-
 // Database connection parameters
-$servername = "localhost"; // Updated to typical MySQL address
+$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "website";
+$dbname = "website"; // Replace with your actual database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    echo json_encode(['status' => 'error', 'message' => 'Connection failed: ' . $conn->connect_error]);
-    exit();
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Handle insert action
@@ -26,24 +23,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['action']) && $_GET['act
     $message = mysqli_real_escape_string($conn, $_POST['message']);
 
     // Insert data into database using prepared statement
-    $sql = "INSERT INTO messages (C_name, email, phone, message) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO contact_me (C_name, email, phone, message) 
+            VALUES (?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
-    if ($stmt === false) {
-        echo json_encode(['status' => 'error', 'message' => 'Prepare failed: ' . $conn->error]);
-        exit();
-    }
     $stmt->bind_param("ssss", $name, $email, $phone, $message);
 
     if ($stmt->execute()) {
-        echo json_encode(['status' => 'success']);
+        echo "New record inserted successfully";
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Execute failed: ' . $stmt->error]);
+        echo "Error: " . $stmt->error;
     }
 
     $stmt->close();
 } else {
-    echo json_encode(['status' => 'error', 'message' => 'Invalid request']);
+    echo "Invalid request";
 }
 
 // Close connection
