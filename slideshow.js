@@ -1,4 +1,5 @@
 let index = 0;
+
 displayImages();
 
 function displayImages() {

@@ -20,14 +20,10 @@ function page_tab(evt, tab_name) {
   evt.currentTarget.className += " active";
 }
 
-function verify(evt, elementId) {
-  if (elementId) {
-      document.getElementById(elementId).style.display = 'block';
-  }
-}
+
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
+      event.preventDefault(); // Prevent default form submission
 
       const formData = new FormData(this);
 
@@ -35,35 +31,31 @@ document.addEventListener('DOMContentLoaded', function() {
           method: 'POST',
           body: formData
       })
-      .then(response => response.json())
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+      })
       .then(result => {
           if (result.status === 'success') {
-              // Display the success message
-              verify(null, 'msg_sent'); // Ensure 'msg_sent' is the correct ID
-
-              // Optional: Hide contact form or update UI
-              document.getElementById('contactForm').style.display = 'none';
-
-              // Redirect to another page after a delay
-              setTimeout(() => {
-                  window.location.href = '/projects/code/index.html';
-              }, 1000); // Adjust the delay if needed
+            document.getElementById('msg_sent').style.display = 'block';
+            clear_val();
           } else {
               alert("There was an error: " + result.message);
           }
       })
       .catch(error => {
-          console.error('Error:', error);
+          console.error('Error:', error); // Debug logging
       });
   });
 });
 
-
 function clear_val(event, company_name, date, email, phone, text_message) {
-  document.getElementById('msg_sent').style.display = "none";
   document.getElementById('company_name').value = '';
   document.getElementById('date').value = '';
   document.getElementById('email').value = '';
   document.getElementById('phone').value = '';
   document.getElementById('text_message').value = '';
+  document.getElementById('contactForm').style.display = 'block';
 }

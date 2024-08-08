@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="myStyle.css">
-
   <script src="slideshow.js" async></script>
   <script src="myscript.js" async></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-
   <div id="wrap">
     <div class="dropdown">
       <button class="dropbtn">Menu</button>
@@ -25,10 +23,10 @@
     </div>
 
     <div id="header">
-      <i><b>CodingCorner.com</b></i>
+      <i><b>&lt;CodingCorner/&gt;</b></i>
     </div>
 
-    <div id="home_page" class="tabcontent" style="display: none;">
+    <div id="home_page" class="tabcontent" style="display: block;">
       <div class="image-slideshow">
         <div class="image fade">
           <img src="img1.jpg" alt="Mountain Top">
@@ -39,18 +37,34 @@
         <div class="image fade">
           <img src="img3.jpg" alt="Neon Sign">
         </div>
+        <div class="image fade">
+          <img src="img0.jpg" alt="Mountain Top">
+        </div>
       </div>
       <p>
-      <h1> Welcome to My Portfolio: Programming, Creativity, and Hobbies</h1>
-      <hr>
-      <h3>Hello and welcome to my digital showcase! I'm JH, a passionate programmer and enthusiast
-        of all things tech, creativity, and collectibles. This portfolio is not just a resume but a journey
-        through my skills in programming and love for hobbies like LEGO building, comics, and Funko Pop collecting.
-        With a solid foundation in programming languages such as Java, HTML, CSS, I've honed my skills through
-        projects that demonstrate my problem-solving abilities and creativity. From ...[mention a notable project or
-        achievement]... to ...[highlight another project]..., I strive to innovate and deliver solutions that make an
-        impact.</h3>
+        <h1><strong>Welcome to JH's Digital Playground!</strong></h1><br><br>
+        
+          <strong>Hello there!</strong> I'm Josh H, a passionate coder with a knack for turning ideas into elegant, functional code. With a blend of creativity and technical prowess, I specialize in [list your key skills or technologies, e.g., web development, app design, or data analysis], crafting solutions that are both innovative and efficient.<br><br>
+        
+        ✨ <strong>Why Choose Me?</strong><br>
+        - <strong>Expertise:</strong> Mastery in [mention specific languages or tools, e.g., JavaScript, Python, React, etc.], with a portfolio of successful projects that speak volumes.<br>
+        - <strong>Creativity:</strong> A keen eye for design and a drive to push the boundaries of what's possible.<br>
+        - <strong>Dedication:</strong> Committed to delivering high-quality results on time, every time.<br><br>
+        
+        📬 <strong>Let's Collaborate!</strong><br>
+        I'm always on the lookout for exciting opportunities and collaborations. If you're looking for a talented 
+        developer to bring your vision to life, don't hesitate to 
+        <a  style="color: blue; cursor: pointer;"  onclick="page_tab(event, 'contact_me')">contact me</a>.
+         Let's make something amazing together!<br><br>
+        
+        🌟 <strong>Beyond the Code:</strong><br>
+        When I'm not immersed in lines of code, you'll find me [mention your hobbies, e.g., exploring new tech
+         trends, playing guitar, hiking, etc.]. These passions fuel my creativity and inspire my work.<br><br>
+        
+        Dive into my <a style="color: blue; cursor: pointer;"  onclick="page_tab(event, 'code')">portfolio</a> to see some of my recent projects, and let's 
+        connect to explore how we can work together to achieve your goals.
       </p>
+      
     </div>
 
 
@@ -182,21 +196,22 @@
       <p><b>References:</b> Available upon request.</p>
     </div>
 
-    <div id="contact_me" class="tabcontent" style="display: block;">
+    <div id="contact_me" class="tabcontent" style="display: none;">
       <label id="text_style">Contact me message: </label><br><br><br>
-      <form id="contactForm" action="http://localhost:8080/projects/code/database.php?action=insert" method="POST">
-        <!-- Form fields: name, email, phone, message -->
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="tel" name="phone" placeholder="Phone">
-        <textarea name="message" placeholder="Message"></textarea>
-        <div style="width: 25%; float: right; margin-top: 2%;">
-          <button id="submit_button" onclick="verify(event, 'msg_sent')" type="submit">Submit message</button>
+
+        <form id="contactForm">
+          <!--<form id="contactForm" action="http://localhost:8080/projects/code/database.php?action=insert" method="POST"> -->
+            <!-- Form fields: name, email, phone, message -->
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="tel" name="phone" placeholder="Phone">
+            <textarea name="message" placeholder="Message"></textarea>
+            <input id="submit_button"  type="submit" style="width: 25%; float: right; margin-top: 2%;">
+        </form>    
+        <div id="msg_sent" style="float: right; margin-top: 4%; font-size: 20px; width: 15%; display: none;">
+          <p>Message sent &#10003;</p>
         </div>
-    </form>    
-      <div id="msg_sent" style="float: right; margin-top: 4%; font-size: 20px; width: 15%; display: none;">
-        Message sent &#10003;
-      </div>
+      
     </div>
 
     <div id="sign-in" class="tabcontent" style="display: none;">
